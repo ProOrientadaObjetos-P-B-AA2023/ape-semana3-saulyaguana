@@ -61,7 +61,10 @@ public class Terreno {
     public String toString() {
         String msj = String.format("DATOS DEL TERRENO: \nAncho del terreno:  %.2f \n"
         + "\nLargo del terrneo: %.2f"
-        + "\nValor del metro cuadrado del terreno: %.2f", this.getAncho(), this.getLargo(), this.getValorMetroCuadrado());
+        + "\nValor del metro cuadrado del terreno: %.2f"
+        + "\nEl área del terreno: %.2f"
+        + "\nEl costo del terreno: %.2f"
+                , this.getAncho(), this.getLargo(), this.getValorMetroCuadrado(), this.getArea(), this.getCosto_terreno());
         return msj;
     }
 }

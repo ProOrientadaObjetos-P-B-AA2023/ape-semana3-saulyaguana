@@ -31,6 +31,11 @@ public class FacturaTelefono {
     public void calcularValorFactura(){
         valorFactura = minutosMes * valorMinuto;
     }
+
+    public void establecerValorFactura(double valorFactura) {
+        valorFactura = minutosMes * valorMinuto;
+
+    }
     
     public String obtenerNumeroTelefono(){
         return numeroTelefono;

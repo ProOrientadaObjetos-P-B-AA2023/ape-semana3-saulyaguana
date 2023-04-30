@@ -9,9 +9,38 @@ public class Institucion {
 
     public Institucion() {}
 
-    public Institucion(int alumnos, double gastosEstudiante) {
+    public Institucion(
+            int alumnos,
+            double gastosEstudiante,
+            String nombre,
+            String tipoDeInstitucion,
+            int numeroDeDocentes,
+            int numeroDeSedes
+    ) {
         this.numeroDeAlumnos = alumnos;
         this.gastosProyectadoPorEstudiante = gastosEstudiante;
+        this.nombre = nombre;
+        this.tipoDeInstitucion = tipoDeInstitucion;
+        this.numeroDeDocentes = numeroDeDocentes;
+        this.numeroDeSedes = numeroDeSedes;
+    }
+
+    // SET
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setTipoDeInstitucion(String tipo) {
+        this.tipoDeInstitucion = tipo;
+    }
+
+    public void setNumeroDeDocentes(int numeroDeDocentes) {
+        this.numeroDeDocentes = numeroDeDocentes;
+    }
+
+    public void setNumeroDeSedes(int numSedes) {
+        this.numeroDeSedes = numSedes;
     }
 
     public void calcularPresupuesto() {
@@ -50,16 +79,19 @@ public class Institucion {
 
     // TO STRING
 
-    public String go() {
-        String mensaje = String.format("INSTITUCIONES EDUCATIVAS: \nNombre de la institución: \n"
-        + "\nTipo de institución: "
-        + "\nNúmero de alumnos: "
-        + "\nNúmero de docentes: "
-        + "\nNúmero de sedes: "
-        + "\nGastos proyectados por estudiante: "
-        + "Presupuesto: "
-        , this.getNombre(), this.getTipoDeInstitucion(), this.getNumeroDeAlumnos(), this.getNumeroDeDocentes()
-        , this.getNumeroDeSedes(), this.getGastosProyectadoPorEstudiante(), this.getPresupuesto());
+    public String toString() {
+        String mensaje = String.format(
+                "INSTITUCIONES EDUCATIVAS: \nNombre: \n"
+                +"\nTipo: "
+                +"\nAlumnos: "
+                +"\nDocentes: "
+                +"\nSedes: "
+                +"\nGastos: "
+                +"\nPresupuesto: "
+                , this.getNombre(), this.getTipoDeInstitucion(), this.getNumeroDeAlumnos()
+                , this.getNumeroDeDocentes(), this.getNumeroDeSedes(), this.getGastosProyectadoPorEstudiante(), this.getPresupuesto()
+
+        );
         return mensaje;
     }
 
